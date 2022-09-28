@@ -2,6 +2,7 @@ package com.mycompany.dvdstore.moviewebUser.controller;
 
 import com.mycompany.dvdstore.core.entity.Movie;
 import com.mycompany.dvdstore.core.service.MovieServiceInterface;
+import com.mycompany.dvdstore.moviewebUser.form.MovieForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,8 +31,8 @@ public class HomeController {
         return movies;
     }
 
-    @GetMapping("/")
-    public void displayMovieForm(@ModelAttribute Movie movie){
+    @GetMapping("/add-movie-form")
+    public void displayMovieForm(@ModelAttribute MovieForm movieForm){
 
     }
 
