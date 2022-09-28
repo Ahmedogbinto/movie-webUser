@@ -7,7 +7,7 @@ public class MovieForm {
     @NotBlank(message = "Veuillez entrez un titre")
     @Size(max=20, message = "Entrez un titre de 20 caractères ou plus")
     private String title;
-    @NotBlank(message = "Veuillez entrer un genre")
+    @NotBlank(message = "Veuillez choisir un genre")
     private String genre;
     private Long id;
     @NotBlank

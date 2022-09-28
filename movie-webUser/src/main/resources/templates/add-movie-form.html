@@ -11,6 +11,7 @@
     <p>Titre</p>
     <p>                                                                 <!-- Spring MVC va utiliser le setter des proprietes pour leur attribuer une valeur -->
         <input type="text" th:field="*{title}"/>
+        <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></div>
     </p>
 
     <p>Genre</p>
@@ -25,8 +26,11 @@
             <option th:value="ANIMATION" th:text="Animation"></option>
         </select>
     </p>
+    <div th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"></div>
+
     <p>Description</p>
     <p><textarea rows ="4" cols="50" th:field ="*{description}"></textarea></p>
+    <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></div>
 
     <input type="submit" value="Ajouter">
 </form>
