@@ -38,7 +38,6 @@ public class MovieResource {
     // Recuperer un film en particulier
     @GetMapping("/{id}")
     public Movie get(@PathVariable("id") long id){
-
         return movieServiceInterface.getMovieById(id);
     }
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DVDStore</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
 <h1>La boutique de DVD en ligne </h1>
@@ -10,16 +11,20 @@
 
 <a href="add-movie-form">Ajout de film</a>
 
-    <table border="1">
-        <tr th:each="movie: ${movies}">
+    <section class="container">
+        <div class="left-half">
+            <artiicle id="movie-list">
 
-            <td>
-                <a th:href ="@{/movie/{id}(id=${movie.id})}" th:text="${movie.title}"/>
-            </td>
-                                                                                                      <!--Nous utilisons le nom invoice(peu importe) donne a notre variable plus haut -->
-            <td th:text="${movie.genre}"></td>
-        </tr>
-    </table>
 
+            </artiicle>
+        </div>
+        <div class="right-half">
+            <artiicle id="movie-detail">
+
+
+            </artiicle>
+        </div>
+    </section>
+<script th:src="@{/js/script.js}"></script>                                <!-- Pour faire charger le fichier script.js par le navigateur apres l'affichage de la dvdstore-home.html-->
 </body>
 </html>

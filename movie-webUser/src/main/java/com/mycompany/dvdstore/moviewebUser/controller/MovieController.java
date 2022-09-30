@@ -24,7 +24,6 @@ public class MovieController {
     }
 
     public void setMovieServiceInterface(MovieServiceInterface movieServiceInterface) {
-
         this.movieServiceInterface = movieServiceInterface;
     }
 
@@ -35,7 +34,7 @@ public class MovieController {
     }*/
 
 
-    /* @PostMapping
+    @PostMapping("/add")
     public String addMovie(@Valid @ModelAttribute MovieForm movieForm, BindingResult results){
         if(results.hasErrors()){
             return "add-movie-form";
@@ -47,5 +46,5 @@ public class MovieController {
 
         movieServiceInterface.registerMovie(movie);
         return "movie-added";
-    }*/
+    }
 }
