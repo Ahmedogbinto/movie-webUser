@@ -26,7 +26,7 @@ public class HomeController {
     }
 
     @GetMapping("/dvdstore-home")
-    public  @ModelAttribute("movies") void  displayHome(){
+    public void displayHome(){
 
     }
 
