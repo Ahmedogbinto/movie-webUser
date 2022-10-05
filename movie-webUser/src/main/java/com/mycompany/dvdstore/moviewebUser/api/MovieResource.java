@@ -31,7 +31,7 @@ public class MovieResource {
 
     // Liste des films
     @GetMapping
-    public  List<Movie> list(){
+    public  Iterable<Movie> list(){
         return  movieServiceInterface.getMovieList();
     }
 
