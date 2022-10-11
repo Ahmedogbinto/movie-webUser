@@ -1,6 +1,7 @@
 package com.mycompany.dvdstore.moviewebUser.controller;
 
 
+import com.mycompany.dvdstore.core.entity.Actor;
 import com.mycompany.dvdstore.core.entity.Movie;
 import com.mycompany.dvdstore.core.service.MovieServiceInterface;;
 import com.mycompany.dvdstore.moviewebUser.form.MovieForm;
@@ -9,8 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.Scanner;
+import javax.validation.Valid;;
 
 @Controller
 @RequestMapping("/movie")
@@ -42,6 +42,10 @@ public class MovieController {
         movie.setTitle(movieForm.getTitle());
         movie.setGenre(movieForm.getGenre());
         movie.setDescription(movieForm.getDescription());
+
+        // Processus de deproxification
+        Actor mainActor = new Actor(movieForm.getFirstName(), movieForm.getLastName());
+        movie.setMainActor(mainActor);
 
         movieServiceInterface.registerMovie(movie);
         return "movie-added";
