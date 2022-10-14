@@ -15,10 +15,10 @@ public class MovieForm {
     private String description;
 
     @NotBlank(message = "Veuillez entrer le prémnom")
-    @Size(max=20, message = "Entrez un prénom de 20 caractères ou plus")
+    @Size(max=20, message = "Entrez un prénom de 20 maximum")
     private String firstName;
     @NotBlank(message = "Veuillez entrer le nom")
-    @Size(max=20, message = "Entrez un nom de 20 caractères ou plus")
+    @Size(max=20, message = "Entrez un nom de 20 maximum")
     private String lastName;
 
 
