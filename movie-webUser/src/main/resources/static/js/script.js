@@ -64,7 +64,7 @@ function showDetail(id){
         invoiceDetailNode.appendChild(p);
 
         var p = document.createElement("p");
-        var text = document.createTextNode(`Main actor: ${res.mainActor.firstName} ${res.mainActor.lastName}`);
+        var text = document.createTextNode(`Main_actor: ${res.mainActor.firstName} ${res.mainActor.lastName}`);
         p.appendChild(text);
         invoiceDetailNode.appendChild(p);
 
